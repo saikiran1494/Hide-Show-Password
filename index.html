@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide and Show password</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <input type="password" placeholder="password" id = "password">
+        <img src="eye-close.png" onclick="pass()" id="img" alt="">
+    </div>
+    <script>
+        var p = document.getElementById("password");
+        var i = document.getElementById("img");
+        function pass()
+        {
+            if (p.type == "password")
+            {
+                p.type = "text";
+                i.src = "eye-open.png";
+            }
+            else
+            {
+                p.type = "password";
+                i.src = "eye-close.png";
+            }
+        }
+    </script>
+</body>
+</html>
